@@ -1,107 +1,171 @@
-# Airbnb Clone
 
-## Overview
+# Airbnb Clone Web Application
 
-This project is a full-stack web application developed as a clone of Airbnb using the MERN stack (MongoDB, Express.js, React.js, Node.js). It aims to replicate the core functionality of Airbnb, allowing users to search for accommodations, view details, make bookings, and manage their listings.
+## Project Overview
+
+Welcome to the Airbnb Clone! This full-stack web application mimics the core features of Airbnb, offering a platform for users to find and book accommodations, explore property listings, and manage their own properties. The application is developed using the MERN stack (MongoDB, Express.js, React.js, Node.js) for a robust and scalable solution.
+
+## How It Works
+
+### Project Structure
+
+- **Frontend:** Built with React.js for a dynamic user interface.
+- **Backend :** Powered by Node.js and Express.js, handling server-side logic and API endpoints.
+
+### Features
+
+- **User Authentication:** Securely sign up, log in, and log out. Integrate with Google for easy authentication.
+- **Search and Explore:** Users can search for and explore various accommodations.
+- **Detailed Listings:** View detailed property information, including photos and amenities.
+- **Booking System:** Authenticated users can book accommodations for selected dates.
+- **Host Management:** Hosts can manage their property listings by adding, editing, or removing them.
+- **Responsive Design:** Designed to work seamlessly on both desktop and mobile devices.
 
 ## Getting Started
 
-1. **Clone the Repository:**
+Follow these steps to set up and run the Airbnb Clone on your local machine.
 
-   ```bash
-   git clone https://github.com/rahul4019/airbnb-clone.git
+### 1. Clone the Repository
 
-   ```
+Begin by cloning the project repository:
 
-2. **Install dependencies:**
+```bash
+git clone https://github.com/rahul4019/airbnb-clone.git
+cd airbnb-clone
+```
 
-   Navigate to client directory and install frontend dependencies using yarn
+### 2. Set Up the Frontend
 
-   ```
-   yarn install
-   ```
+1. Navigate to the `frontend` directory:
 
-   Similary navigate to api folder and install backend dependencies
+    ```bash
+    cd frontend
+    ```
 
-   ```
-   yarn install
-   ```
+2. Install the required dependencies:
 
-3. **ENV variables:**
+    ```bash
+    npm install
+    ```
 
-   - create .env file in the client folder and add these variables
+### 3. Set Up the Backend
 
-     #### VITE_BASE_URL= http://localhost:4000
+1. Move to the `backend` directory:
 
-     #### VITE_GOOGLE_CLIENT_ID= your google client id
+    ```bash
+    cd ../backend
+    ```
 
-   - create .env file in the api folder and add these variables
+2. Install the backend dependencies:
 
-     #### PORT= 4000
+    ```bash
+    npm install
+    ```
 
-     #### DB_URL= your db url
+### 4. Configure Environment Variables
 
-     #### JWT_SECRET= your secret (string)
+#### For the Frontend
 
-     #### JWT_EXPIRY= 20d
+1. Create a `.env` file in the `frontend` directory.
+2. Add the following environment variables:
 
-     #### COOKIE_TIME= 7
+    ```
+    VITE_BASE_URL=http://localhost:4000
+    VITE_GOOGLE_CLIENT_ID=your_google_client_id
+    ```
 
-     #### SESSION_SECRET= your secret session (string)
+#### For the Backend
 
-     #### CLOUDINARY_NAME= your secret session
+1. Create a `.env` file in the `backend` directory.
+2. Add the following environment variables:
 
-     #### CLOUDINARY_API_KEY= your cloudinary key
+    ```
+    PORT=4000
+    DB_URL=your_database_url
+    JWT_SECRET=your_jwt_secret
+    JWT_EXPIRY=20d
+    COOKIE_TIME=7
+    SESSION_SECRET=your_session_secret
+    CLOUDINARY_NAME=your_cloudinary_name
+    CLOUDINARY_API_KEY=your_cloudinary_api_key
+    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+    CLIENT_URL=http://localhost:5173
+    ```
 
-     #### CLOUDINARY_API_SECRET= your cloudinary api secret
+### 5. Running the Application
 
-     #### CLIENT_URL= http://localhost:5173
+#### Start the Frontend
 
-4. **Run project:**
-   - Open terminal, navigate to client directory and run below command to start frontend
-   ```
-       yarn run dev
-   ```
-   - Open another terminal, navigate to api directory and run this command to start backend server
-   ```
-       yarn start
-   ```
+Open a terminal, go to the `frontend` directory, and start the React development server:
 
-## Features
+```bash
+cd frontend
+npm run dev
+```
 
-- **User Authentication:** Users can sign up, log in, and log out securely. Passwords are hashed for security.
-- **Google Login:** Users can sign up and log in using their gmail.
+#### Start the Backend
 
-  ![Airbnb Logo](client/public/assets/auth.png)
+In another terminal, navigate to the `backend` directory and start the Node.js server:
 
-- **Search Listings:** Users can search for accommodations.
+```bash
+cd backend
+npm start
+```
 
-  ![Airbnb Logo](client/public/assets/search.png)
+## Key Technologies
 
-- **View Listings:** Users can view detailed information about each accommodation, including photos, descriptions, amenities.
+- **MongoDB:** NoSQL database for storing user and listing data.
+- **Express.js:** Framework for building the backend API.
+- **React.js:** Library for creating the frontend user interface.
+- **Node.js:** Runtime for executing JavaScript on the server side.
+- **Tailwind CSS:** Framework for styling components with a utility-first approach.
+- **Shadcn:** UI components library styled with Tailwind CSS.
+- **JWT:** For handling secure user authentication.
+- **Cloudinary:** Service for managing and delivering images.
+- **Google Cloud:** Provides integration with Gmail for authentication.
 
-  ![Airbnb Logo](client/public/assets/view.png)
+## Screenshots
 
-- **Make Bookings:** Authenticated users can book accommodations for specific dates.
+Here are some key screenshots of the application:
 
-  ![Airbnb Logo](client/public/assets/book.png)
+- **Authentication Page**
+  
+  ![Authentication](frontend/public/assets/auth.png)
 
-- **Manage Listings:** Hosts can create, edit, and delete their listings.
+- **Search Page**
+  
+  ![Search](frontend/public/assets/search.png)
 
-  ![Airbnb Logo](client/public/assets/manage.png)
+- **Listing Details**
+  
+  ![Listing Details](frontend/public/assets/view.png)
 
-- **Responsive Design:** The application is designed to be responsive and work seamlessly across different devices.
+- **Booking Interface**
+  
+  ![Booking](frontend/public/assets/book.png)
 
-  ![Airbnb Logo](client/public/assets/hero.png)
+- **Host Management**
+  
+  ![Host Management](frontend/public/assets/manage.png)
 
-## Technologies Used
+- **Responsive Design**
+  
+  ![Responsive Design](frontend/public/assets/hero.png)
 
-- **MongoDB:** NoSQL database for storing user data, listings.
-- **Express.js:** Web application framework for building the backend server.
-- **React.js:** JavaScript library for building the user interface.
-- **Node.js:** JavaScript runtime environment for executing server-side code.
-- **Tailwind CSS:** A utility-first CSS framework
-- **Shadcn:** UI library for styling based on Tailwind CSS
-- **JWT:** JSON Web Tokens for secure user authentication.
-- **Cloudinary:** Cloud-based image management for storing and serving images.
-- **Google Cloud:** For gmail based authentication
+## Contributing
+
+If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to adapt any sections or add additional details as needed!
